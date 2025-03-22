@@ -21,8 +21,9 @@ export function usePi() {
                 (auth) => {
                     setUser(auth.user.username);
                     console.log("Авторизован:", auth.user.username);
+                    alert("success")
                 },
-                (err) => console.error("Ошибка авторизации:", err)
+                () => alert("Failed to authenticate Pi"),
             );
         } catch (error) {
             console.error(error);
